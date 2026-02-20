@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Jonathan Odafe Eveso</title>
+
+    <style>
+        :root {
+            --green: #2E7D32;
+            --blue: #0288D1;
+            --light-gray: #f4f4f4;
+            --bg: #FFFFFF;
+            --text: #333333;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --text: #FFFFFF;
+            --green: #1B5E20;
+            --blue: #0277BD;
+            --light-gray: #1E1E1E;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--green);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 46px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--blue);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+
+        .section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .section h1, .section h2 {
+            color: var(--green);
+        }
+
+        .section h2 {
+            border-left: 6px solid var(--blue);
+            padding-left: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--blue);
+        }
+
+        footer {
+            background-color: var(--green);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#research">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="toggle-container">
+            <span>Dark mode</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </nav>
+
+    <div class="section">
+        <h1>Publications</h1>
+
+        <h2>Peer‑Reviewed Journal Articles</h2>
+        <ul>
+            <li>
+                Adam, L. I., Eveso, J. O., Mohammed, A. (2023). Diversity and Density of Small Mammal Species with Different Seasons and Habitats in Federal University Gashua, Yobe State, North-east Zone of Nigeria. <em>Journal of Biology and Nature</em>, 15(2): 16–27.
+            </li>
+            <li>
+                Abubakar, S. R., Muhammad, S. I., Bako, L. A., Abubakar, H. M., Isa, S. M., Nelly, D. J., ... Eveso, J. O., et al. (2022). How citizen scientists are rapidly generating big distribution data: lessons from the Arewa Atlas Team, Nigerian Bird Atlas Project. <em>Ostrich</em>, 1–10.
+            </li>
+            <li>
+                Eveso, J. O., Wakawa, L. D., &amp; Richard, R. (2022). Diversity and abundance of avifauna species in Federal University, Gashua, Northeast Nigeria. <em>Journal of Research in Forestry, Wildlife &amp; Environment</em>, 14(1): 1–9.
+            </li>
+            <li>
+                Adam, L. I., Gambo, A. A., Eveso, J. O., Mohammed, A., Ya’u, M. A., &amp; Modu, M. B. (2021). Preliminary Study on Composition and Ecological Distribution of Small Mammal Species in Federal University, Gashua, Yobe State Northeast Nigeria. <em>Journal of Research in Forestry, Wildlife &amp; Environment</em>, 13(4): 57–65.
+            </li>
+            <li>
+                Eveso, J. O., Ojo, S. O., &amp; Emelue, G. U. (2019). Understanding avitourism impact and host communities' involvement in Dagona Waterfowl Sanctuary, Nigeria. <em>Nigerian Journal of Wildlife Management</em>, 3(2), 74–86.
+            </li>
+            <li>
+                Owolabi, B. A., Adekola, O. E., Eveso, J. O., &amp; Akande, H. A. (2018). Diurnal Patterns of Daily Activities Frequencies of White-Faced Whistling Duck (<em>Dendrocygna viduata</em>) in an Open Dam in Osogbo, Osun State, Nigeria. <em>Journal of Biodiversity and Endangered Species</em>, 6(2), 1–5.
+            </li>
+            <li>
+                Ajayi, O. O., &amp; Eveso, J. O. (2017). Ecotourism in Nigeria: The Okomu National Park Context. <em>Journal of Tourism, Hospitality and Sports</em>, 28: 22–33.
+            </li>
+            <li>
+                Orimaye, J. O., Okosodo, E. F., Ogunyemi, O. O., Owolabi, B. A., &amp; Eveso, J. (2016). Bird Species Diversity in the Royal Forest Reserve in Eggua, Southwestern Nigeria. <em>Journal of Researches in Agricultural Sciences</em>, 4(1 &amp; 2): 72–75.
+            </li>
+        </ul>
+
+        <h2>Conference Proceedings (Oral Presentations)</h2>
+        <ul>
+            <li>
+                Eveso, J. O., &amp; Ojo, S. O. (2019). Demography, motivation and influx trend of avitourists in Dagona Waterfowl Sanctuary of Chad Basin National Park, Nigeria. In Obiora, J. N., Ogunlade, C. E., Managwu, L., &amp; Nwokorie, E. (Eds.), <em>Proceedings of the 13th Annual Conference of HATMAN</em>, Federal University of Agriculture, Abeokuta, pp. 32–40.
+            </li>
+            <li>
+                Emelue, G. U., Eveso, J. O., Ozegbe, C., &amp; Okwa, S. (2019). Assessing indigenous wildlife conservation practices in Ndokwa East and Ndokwa West Local Government Areas of Delta State. In Adeyanju, A. T., et al. (Eds.), <em>Proceedings of the 3rd Annual Conference of Wildlife Society of Nigeria (WISON)</em>, University of Ibadan, pp. 23–32.
+            </li>
+            <li>
+                Adam, L. I., Eveso, J. O., Mbaya, Y. P., Ojo, V. A., &amp; Abdullahi, M. (2019). Avifauna checklist along Bade Catchment Area of River Yobe, Northeast Nigeria. In Adeyanju, A. T., et al. (Eds.), <em>Proceedings of the 3rd Annual Conference of WISON</em>, University of Ibadan, pp. 256–261.
+            </li>
+            <li>
+                Emelue, G. U., Eveso, J. O., Aigba, P., &amp; Okwa, S. (2018). Awareness and attitude of secondary school students towards wildlife conservation in Etsako Central Local Government Area of Edo State, Nigeria. In Ogunjimi, A. A., et al. (Eds.), <em>Proceedings of the 2nd Annual Conference of WISON</em>, Federal University of Technology, Akure, pp. 107–114.
+            </li>
+            <li>
+                Eveso, J. O., Ajayi, O. O., &amp; Okwa, S. (2017). Avitourism in Nigeria: A review of its present status, conservation and socio-economic potentials, and key actions for its development. In Shotuyo, A. I. A., et al. (Eds.), <em>Proceedings of the Maiden Annual Conference of WISON</em>, Federal University of Agriculture, Abeokuta, pp. 357–364.
+            </li>
+        </ul>
+
+        <h2>Poster Presentations</h2>
+        <ul>
+            <li>
+                November 2023. Poster: <em>Causes and Consequences of Global Change on Vultures: A Spatio-temporal Analysis of Their Behavior, Movement and Space Use</em>. IMPRS-QBEE Annual PhD Retreat, Freiburg, Germany.
+            </li>
+            <li>
+                March 2024. Poster: <em>Vultures' Response to Global Change</em>. IMPRS-QBEE Annual Selection Symposium, Universität Konstanz, Germany.
+            </li>
+        </ul>
+
+        <h2>Other Non‑Academic & Outreach Contributions</h2>
+        <ul>
+            <li>
+                Citizen Scientist, Nigeria Bird Atlas Project (NiBAP): atlassing/mapping of Nigerian birds, with 25 pentads completed. 
+            </li>
+            <li>
+                Founder and Coordinator, Gashua Bird Club: organised birdwatching outings, educational programmes, and community sensitisation on bird conservation in Yobe State, Nigeria.
+            </li>
+            <li>
+                Conservation education and zoo interpretation at Ogba Zoological Garden and Nature Park, including tour guiding and museum taxidermy work.
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        © 2025 Jonathan Odafe Eveso — Publications
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggle.checked = true;
+        }
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
