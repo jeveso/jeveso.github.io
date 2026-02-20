@@ -107,18 +107,78 @@
             margin: auto;
         }
 
-        .section h1, .section h2 {
+        h1, h2 {
             color: var(--green);
         }
 
-        .section h2 {
+        h2 {
             border-left: 6px solid var(--blue);
             padding-left: 10px;
-            margin-top: 40px;
         }
 
-        p, li {
-            margin-bottom: 12px;
+        /* Collapsible sections */
+        details {
+            background: var(--light-gray);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        summary {
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--green);
+        }
+
+        summary:hover {
+            color: var(--blue);
+        }
+
+        /* DOI button */
+        .doi-btn {
+            display: inline-block;
+            padding: 4px 10px;
+            margin-left: 8px;
+            background-color: var(--blue);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        .doi-btn:hover {
+            background-color: var(--green);
+        }
+
+        /* Author link icon */
+        .author-links {
+            cursor: pointer;
+            margin-left: 6px;
+            font-size: 1rem;
+        }
+
+        /* Dropdown menu */
+        .link-menu {
+            display: none;
+            position: absolute;
+            background: var(--light-gray);
+            border: 1px solid var(--green);
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 4px;
+            z-index: 2000;
+        }
+
+        .link-menu a {
+            display: block;
+            padding: 4px 0;
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .link-menu a:hover {
+            color: var(--green);
         }
 
         footer {
@@ -153,141 +213,184 @@
     <div class="section">
         <h1>Research</h1>
 
-        <h2>Research Interests</h2>
-        <p>
-            My research focuses on movement and spatial ecology, wildlife management, and species conservation, 
-            with a particular emphasis on birds—especially raptors. I am interested in how animals navigate 
-            dynamic and changing environments, how global change influences their behavior and survival, 
-            and how ecological data can inform conservation strategies.
-        </p>
+        <!-- Research Interests -->
+        <details open>
+            <summary>Research Interests</summary>
+            <p>
+                My research focuses on movement and spatial ecology, wildlife management, and species conservation, 
+                with a particular emphasis on birds—especially raptors. I am interested in how animals navigate 
+                dynamic and changing environments, how global change influences their behavior and survival, 
+                and how ecological data can inform conservation strategies.
+            </p>
+        </details>
 
-        <h2>Technical Skills</h2>
-        <p>
-            <strong>Data Analysis:</strong> R programming (sf, move, move2, terra, dismo, sdm, biomod2, tidyverse, ggplot2, etc.),  
-            PAST, SPSS.
-        </p>
-        <p>
-            <strong>Writing:</strong> Microsoft Office, Mendeley, Zotero, Overleaf.
-        </p>
-        <p>
-            <strong>Reproducibility:</strong> GitHub for version control and code sharing.
-        </p>
+        <!-- Technical Skills -->
+        <details>
+            <summary>Technical Skills</summary>
+            <ul>
+                <li><strong>Data Analysis:</strong> R (sf, move, move2, terra, dismo, sdm, biomod2, tidyverse, ggplot2), PAST, SPSS</li>
+                <li><strong>Scientific Writing:</strong> Microsoft Office, Mendeley, Zotero, Overleaf</li>
+                <li><strong>Reproducibility:</strong> GitHub version control</li>
+                <li><strong>Field Ecology:</strong> Bird surveys, ecological monitoring, wildlife handling</li>
+            </ul>
+        </details>
 
-        <h2>Peer‑Reviewed Journal Articles</h2>
+        <!-- Publications -->
+        <details>
+            <summary>Peer‑Reviewed Journal Articles</summary>
+            <ul>
 
-        <p>
-            Adam, L. I., Eveso, J. O., Mohammed A. (2023). <strong>Diversity and Density of Small Mammal Species with Different Seasons and Habitats in Federal University Gashua, Yobe State, North-east Zone of Nigeria.</strong> 
-            <em>Journal of Biology and Nature</em>, 15(2): 16–27. https://doi.org/10.56557/JOBAN/2023/v15i28219
-        </p>
+                <li>
+                    Adam, L. I., 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, Mohammed A. (2023). 
+                    <strong>Diversity and Density of Small Mammal Species...</strong> 
+                    <em>Journal of Biology and Nature</em>, 15(2): 16–27.
+                    <a class="doi-btn" href="https://doi.org/10.56557/JOBAN/2023/v15i28219" target="_blank">DOI</a>
+                </li>
 
-        <p>
-            Abubakar S Ringim, Sulaiman I Muhammad, Longji A Bako, Haruna M Abubakar, Sulaiman M Isa, Doofan J Nelly, Aliyu A Bajoga, Abdulhamid S Bunu, Hafiz A Adam, Idris M Jalo, <strong>Jonathan O Eveso</strong>, Eugene D Mathew, Bello A Danmallam, Umbule Mador, Jennifer I Paul, Isuwa Aminu, Alai Lawal, Joseph I Izang & Ponyil N Abu (2022). 
-            <strong>How citizen scientists are rapidly generating big distribution data: lessons from the Arewa Atlas Team, Nigerian Bird Atlas Project.</strong> 
-            <em>Ostrich</em>, 1–10. https://doi.org/10.2989/00306525.2022.2058105
-        </p>
+                <li>
+                    Abubakar S Ringim, Sulaiman I Muhammad, Longji A Bako, Haruna M Abubakar, Sulaiman M Isa, Doofan J Nelly, Aliyu A Bajoga, Abdulhamid S Bunu, Hafiz A Adam, Idris M Jalo, 
+                    <span class="author-links">🔗</span> 
+                    <strong>Jonathan O Eveso</strong>, et al. (2022). 
+                    <strong>How citizen scientists are rapidly generating big distribution data...</strong> 
+                    <em>Ostrich</em>, 1–10.
+                    <a class="doi-btn" href="https://doi.org/10.2989/00306525.2022.2058105" target="_blank">DOI</a>
+                </li>
 
-        <p>
-            Eveso, J. O., Wakawa, L. D. and Richard, R. (2022). <strong>Diversity and abundance of avifauna species in Federal University, Gashua, Northeast Nigeria.</strong> 
-            <em>Journal of Research in Forestry, Wildlife & Environment</em>, 14(1): 1–9.
-        </p>
+                <li>
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, Wakawa, L. D. and Richard, R. (2022). 
+                    <strong>Diversity and abundance of avifauna species...</strong> 
+                    <em>Journal of Research in Forestry, Wildlife & Environment</em>, 14(1): 1–9.
+                </li>
 
-        <p>
-            Adam, L. I, Gambo A. A., <strong>Eveso, J. O.</strong>, Mohammed A. Ya ‘u M. A. and Modu M. B. (2021). 
-            <strong>Preliminary Study on Composition and Ecological Distribution of Small Mammal Species in Federal University, Gashua, Yobe State Northeast Nigeria.</strong> 
-            <em>Journal of Research in Forestry, Wildlife & Environment</em>, 13(4): 57–65.
-        </p>
+                <li>
+                    Adam, L. I, Gambo A. A., 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, et al. (2021). 
+                    <strong>Preliminary Study on Composition and Ecological Distribution...</strong> 
+                    <em>Journal of Research in Forestry, Wildlife & Environment</em>, 13(4): 57–65.
+                </li>
 
-        <p>
-            <strong>Eveso, J. O.</strong>, Ojo, S. O., and Emelue, G. U. (2019). 
-            <strong>Understanding avitourism Impact and Host Communities' Involvement In Dagona Waterfowl Sanctuary, Nigeria.</strong> 
-            <em>Nigerian Journal of Wildlife Management</em>, 3(2), 74–86.
-        </p>
+                <li>
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, Ojo, S. O., and Emelue, G. U. (2019). 
+                    <strong>Understanding avitourism Impact...</strong> 
+                    <em>Nigerian Journal of Wildlife Management</em>, 3(2), 74–86.
+                </li>
 
-        <p>
-            Owolabi, B.A., Adekola, O.E., <strong>Eveso, J.O.</strong>, Akande, H.A. (2018). 
-            <strong>Diurnal Patterns of Daily Activities Frequencies of White-Faced Whistling Duck (Dendrocygna Viduata) in an Open Dam in Osogbo, Osun State, Nigeria.</strong> 
-            <em>Journal of Biodiversity and Endangered Species</em>, 6(2), 1–5.
-        </p>
+                <li>
+                    Owolabi, B.A., Adekola, O.E., 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J.O.</strong>, Akande, H.A. (2018). 
+                    <strong>Diurnal Patterns of Daily Activities...</strong> 
+                    <em>Journal of Biodiversity and Endangered Species</em>, 6(2), 1–5.
+                </li>
 
-        <p>
-            Ajayi, O. O. and <strong>Eveso, J. O.</strong> (2017). 
-            <strong>Ecotourism in Nigeria: The Okomu National Park Context.</strong> 
-            <em>Journal of Tourism, Hospitality and Sports</em>, 28: 22–33.
-        </p>
+                <li>
+                    Ajayi, O. O. and 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong> (2017). 
+                    <strong>Ecotourism in Nigeria...</strong> 
+                    <em>Journal of Tourism, Hospitality and Sports</em>, 28: 22–33.
+                </li>
 
-        <p>
-            Orimaye, J. O., Okosodo, E. F., Ogunyemi, O. O., Owolabi, B. A., and <strong>Eveso, J.</strong> (2016). 
-            <strong>Bird Species Diversity in the Royal Forest Reserve in Eggua, Southwestern Nigeria.</strong> 
-            <em>Journal of Researches in Agricultural Sciences</em>, 4 (1 & 2): 72–75.
-        </p>
+                <li>
+                    Orimaye, J. O., Okosodo, E. F., Ogunyemi, O. O., Owolabi, B. A., and 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J.</strong> (2016). 
+                    <strong>Bird Species Diversity...</strong> 
+                    <em>Journal of Researches in Agricultural Sciences</em>, 4 (1 & 2): 72–75.
+                </li>
 
-        <h2>Conference Proceedings (Oral Presentations)</h2>
+            </ul>
+        </details>
 
-        <p>
-            <strong>Eveso, J. O.</strong> and Ojo, S. O. (2019, Nov. 5–9). 
-            <strong>Demography, motivation and influx trend of Avitourists in Dagona Waterfowl Sanctuary of Chad Basin National Park, Nigeria.</strong> 
-            In Obiora, J. N., Ogunlade, C. E., Managwu, L. and Nwokorie, E. (Eds.), 
-            <em>Proceedings of the 13th Annual Conference of HATMAN</em>, Federal University of Agriculture, Abeokuta (pp. 32–40).
-        </p>
+        <!-- Proceedings -->
+        <details>
+            <summary>Conference Proceedings</summary>
+            <ul>
 
-        <p>
-            Emelue, G. U., <strong>Eveso, J. O.</strong>, Ozegbe, C. and Okwa, S. (2019, Sept. 16–19). 
-            <strong>Assessing indigenous Wildlife Conservation Practices in Ndokwa East and Ndokwa West Local Government Areas of Delta State.</strong> 
-            In Adeyanju, A. T., et al. (Eds.), 
-            <em>Proceedings of the 3rd Annual Conference of Wildlife Society of Nigeria (WISON)</em>, University of Ibadan (pp. 23–32).
-        </p>
+                <li>
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong> and Ojo, S. O. (2019). 
+                    <strong>Demography, motivation and influx trend...</strong> 
+                    In <em>Proceedings of the 13th Annual Conference of HATMAN</em>.
+                </li>
 
-        <p>
-            Adam, L. I., <strong>Eveso, J. O.</strong>, Mbaya, Y. P., Ojo, V. A. and Abdullahi, M. (2019, Sept. 16–19). 
-            <strong>Avifauna checklist along Bade Catchment Area of River Yobe, Northeast Nigeria.</strong> 
-            In Adeyanju, A. T., et al. (Eds.), 
-            <em>Proceedings of the 3rd Annual Conference of WISON</em>, University of Ibadan (pp. 256–261).
-        </p>
+                <li>
+                    Emelue, G. U., 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, et al. (2019). 
+                    <strong>Assessing indigenous Wildlife Conservation Practices...</strong> 
+                    In <em>Proceedings of the 3rd Annual Conference of WISON</em>.
+                </li>
 
-        <p>
-            Emelue, G. U., <strong>Eveso, J. O.</strong>, Aigba, P. and Okwa, S. (2018, Sept. 16–19). 
-            <strong>Awareness and Attitude of Secondary School Students towards Wildlife Conservation in Etsako Central Local Government Area of Edo State, Nigeria.</strong> 
-            In Ogunjimi, A. A., et al. (Eds.), 
-            <em>Proceedings of the 2nd Annual Conference of WISON</em>, Federal University of Technology, Akure (pp. 107–114).
-        </p>
+                <li>
+                    Adam, L. I., 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, et al. (2019). 
+                    <strong>Avifauna checklist along Bade Catchment Area...</strong> 
+                    In <em>Proceedings of the 3rd Annual Conference of WISON</em>.
+                </li>
 
-        <p>
-            <strong>Eveso, J. O.</strong>, Ajayi, O. O., and Okwa, S. (2017, Sept. 17–20). 
-            <strong>Avitourism in Nigeria: A Review of its present status, Conservation and Socio-Economic Potentials, and Key Actions for its Development.</strong> 
-            In Shotuyo, A.I.A., et al. (Eds.), 
-            <em>Proceedings of the Maiden Annual Conference of WISON</em>, Federal University of Agriculture, Abeokuta (pp. 357–364).
-        </p>
+                <li>
+                    Emelue, G. U., 
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, et al. (2018). 
+                    <strong>Awareness and Attitude of Secondary School Students...</strong> 
+                    In <em>Proceedings of the 2nd Annual Conference of WISON</em>.
+                </li>
 
-        <h2>Poster Presentations</h2>
+                <li>
+                    <span class="author-links">🔗</span> 
+                    <strong>Eveso, J. O.</strong>, Ajayi, O. O., and Okwa, S. (2017). 
+                    <strong>Avitourism in Nigeria...</strong> 
+                    In <em>Proceedings of the Maiden Annual Conference of WISON</em>.
+                </li>
 
-        <p>
-            <strong>November 2023.</strong> Poster presentation: 
-            <em>Causes and Consequences of Global Change on Vultures: A Spatio-temporal analysis of their behavior, movement and space use.</em>  
-            IMPRS-QBEE Annual PhD Retreat, Freiburg, Germany.
-        </p>
+            </ul>
+        </details>
 
-        <p>
-            <strong>March 2024.</strong> Poster presentation: 
-            <em>Vultures' response to global change.</em>  
-            IMPRS-QBEE Annual Selection Symposium, Universität Konstanz, Germany.
-        </p>
+        <!-- Posters -->
+        <details>
+            <summary>Poster Presentations</summary>
+            <ul>
+                <li>
+                    <strong>November 2023.</strong> 
+                    <em>Causes and Consequences of Global Change on Vultures...</em>  
+                    IMPRS-QBEE Annual PhD Retreat, Freiburg, Germany.
+                </li>
 
-        <h2>Outreach & Non‑Academic Contributions</h2>
+                <li>
+                    <strong>March 2024.</strong> 
+                    <em>Vultures' response to global change.</em>  
+                    IMPRS-QBEE Annual Selection Symposium, Universität Konstanz, Germany.
+                </li>
+            </ul>
+        </details>
 
-        <p>
-            <strong>Citizen Scientist, Nigeria Bird Atlas Project (NiBAP):</strong>  
-            Participated in atlassing/mapping of Nigerian birds; successfully mapped 25 pentads.
-        </p>
+        <!-- Outreach -->
+        <details>
+            <summary>Outreach & Non‑Academic Contributions</summary>
+            <ul>
+                <li>
+                    <strong>Citizen Scientist, Nigeria Bird Atlas Project (NiBAP):</strong>  
+                    Participated in atlassing/mapping of Nigerian birds; successfully mapped 25 pentads.
+                </li>
 
-        <p>
-            <strong>Coordinator, Gashua Bird Club (GBC):</strong>  
-            Founded the club, organised birdwatching outings, facilitated educational programs, and led community sensitization on bird conservation in Yobe State.
-        </p>
+                <li>
+                    <strong>Coordinator, Gashua Bird Club (GBC):</strong>  
+                    Founded the club, organised birdwatching outings, facilitated educational programs, and led community sensitization on bird conservation in Yobe State.
+                </li>
 
-        <p>
-            <strong>Zoo Interpretation & Conservation Education:</strong>  
-            Provided research facilitation, tour guiding, enrichment design, and taxidermy work at Ogba Zoological Garden and Nature Park.
-        </p>
+                <li>
+                    <strong>Zoo Interpretation & Conservation Education:</strong>  
+                    Provided research facilitation, tour guiding, enrichment design, and taxidermy work at Ogba Zoological Garden and Nature Park.
+                </li>
+            </ul>
+        </details>
 
     </div>
 
@@ -296,6 +399,7 @@
     </footer>
 
     <script>
+        /* Dark mode toggle */
         const toggle = document.getElementById('theme-toggle');
         const storedTheme = localStorage.getItem('theme');
 
@@ -312,6 +416,37 @@
                 document.documentElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
             }
+        });
+
+        /* Author link dropdown */
+        document.querySelectorAll('.author-links').forEach(icon => {
+            icon.addEventListener('click', function (e) {
+                e.stopPropagation();
+
+                // Close any open menus
+                document.querySelectorAll('.link-menu').forEach(menu => menu.remove());
+
+                // Create menu
+                const menu = document.createElement('div');
+                menu.className = 'link-menu';
+
+                menu.innerHTML = `
+                    <a href="https://orcid.org/0000-0003-2647-3845" target="_blank">ORCID</a>
+                    <a href="https://scholar.google.com/citations?user=DvmhCawAAAAJ" target="_blank">Google Scholar</a>
+                    <a href="https://www.researchgate.net/profile/Jonathan-Eveso?ev=hdr_xprf" target="_blank">ResearchGate</a>
+                `;
+
+                // Position menu
+                const rect = icon.getBoundingClientRect();
+                menu.style.position = "absolute";
+                menu.style.left = rect.left + "px";
+                menu.style.top = rect.bottom + "px";
+
+                document.body.appendChild(menu);
+
+                // Close on click outside
+                document.addEventListener('click', () => menu.remove(), { once: true });
+            });
         });
     </script>
 
