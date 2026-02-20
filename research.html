@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Jonathan Odafe Eveso</title>
+
+    <style>
+        :root {
+            --green: #2E7D32;
+            --blue: #0288D1;
+            --light-gray: #f4f4f4;
+            --bg: #FFFFFF;
+            --text: #333333;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --text: #FFFFFF;
+            --green: #1B5E20;
+            --blue: #0277BD;
+            --light-gray: #1E1E1E;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--green);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 46px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--blue);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+
+        .section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .section h1, .section h2 {
+            color: var(--green);
+        }
+
+        .section h2 {
+            border-left: 6px solid var(--blue);
+            padding-left: 10px;
+            margin-top: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--blue);
+        }
+
+        footer {
+            background-color: var(--green);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="toggle-container">
+            <span>Dark mode</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </nav>
+
+    <div class="section">
+        <h1>Research</h1>
+
+        <h2>Research Overview and Interests</h2>
+        <p>
+            My research focuses on understanding how animals move through dynamic and changing environments, 
+            with a particular emphasis on raptors and dryland ecosystems. I work at the intersection of 
+            movement ecology, spatial ecology, wildlife conservation, and environmental change.
+        </p>
+        <p>
+            As a PhD Candidate in the Animal–Environment Interactions Lab at the Max Planck Institute of Animal Behavior 
+            and Universität Konstanz, I analyze high-resolution movement datasets, develop spatial models, and explore 
+            how global change influences species behavior and survival.
+        </p>
+
+        <h3>Research Interests</h3>
+        <ul>
+            <li>Movement & Spatial Ecology</li>
+            <li>Wildlife Management</li>
+            <li>Species Conservation</li>
+            <li>Avifauna Diversity</li>
+            <li>Raptors and Dryland Ecosystems</li>
+        </ul>
+
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>R Programming (sf, move, move2, terra, tidyverse, ggplot2, etc.)</li>
+            <li>GIS & Spatial Analysis</li>
+            <li>Field Ecology & Data Collection</li>
+            <li>Scientific Writing & Visualization</li>
+            <li>Reproducible Research (GitHub, version control)</li>
+        </ul>
+
+        <h2>Peer‑Reviewed Journal Articles</h2>
+        <ul>
+            <li>Adam, L. I., Eveso, J. O., Mohammed, A. (2023)...</li>
+            <li>Abubakar, S. R., Muhammad, S. I., ... Eveso, J. O. (2022)...</li>
+            <li>Eveso, J. O., Wakawa, L. D., & Richard, R. (2022)...</li>
+            <li>Adam, L. I., Gambo, A. A., Eveso, J. O., et al. (2021)...</li>
+            <li>Eveso, J. O., Ojo, S. O., & Emelue, G. U. (2019)...</li>
+            <li>Owolabi, B. A., Adekola, O. E., Eveso, J. O., et al. (2018)...</li>
+            <li>Ajayi, O. O., & Eveso, J. O. (2017)...</li>
+            <li>Orimaye, J. O., Okosodo, E. F., Ogunyemi, O. O., Owolabi, B. A., & Eveso, J. (2016)...</li>
+        </ul>
+
+        <h2>Conference Proceedings (Oral Presentations)</h2>
+        <ul>
+            <li>Eveso, J. O., & Ojo, S. O. (2019)...</li>
+            <li>Emelue, G. U., Eveso, J. O., Ozegbe, C., & Okwa, S. (2019)...</li>
+            <li>Adam, L. I., Eveso, J. O., Mbaya, Y. P., et al. (2019)...</li>
+            <li>Emelue, G. U., Eveso, J. O., Aigba, P., & Okwa, S. (2018)...</li>
+            <li>Eveso, J. O., Ajayi, O. O., & Okwa, S. (2017)...</li>
+        </ul>
+
+        <h2>Poster Presentations</h2>
+        <ul>
+            <li>Causes and Consequences of Global Change on Vultures (IMPRS-QBEE, 2023)</li>
+            <li>Vultures' Response to Global Change (IMPRS-QBEE, 2024)</li>
+        </ul>
+
+        <h2>Outreach & Non‑Academic Contributions</h2>
+        <ul>
+            <li>Citizen Scientist, Nigeria Bird Atlas Project (25 pentads mapped)</li>
+            <li>Founder & Coordinator, Gashua Bird Club</li>
+            <li>Conservation education and zoo interpretation (Ogba Zoological Garden)</li>
+        </ul>
+    </div>
+
+    <footer>
+        © 2025 Jonathan Odafe Eveso — Research
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggle.checked = true;
+        }
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+</html>
