@@ -6,42 +6,101 @@
     <title>Jonathan Odafe Eveso | Movement Ecology & Wildlife Science</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #FFFFFF;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Color palette */
         :root {
             --green: #2E7D32;
             --blue: #0288D1;
             --light-gray: #f4f4f4;
+            --bg: #FFFFFF;
+            --text: #333333;
         }
 
-        /* Navigation */
+        [data-theme="dark"] {
+            --bg: #121212;
+            --text: #FFFFFF;
+            --green: #1B5E20;
+            --blue: #0277BD;
+            --light-gray: #1E1E1E;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
         nav {
             background-color: var(--green);
-            padding: 15px;
+            padding: 10px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        nav a {
+        .nav-links a {
             color: white;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             color: var(--blue);
         }
 
-        /* Hero Section */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 46px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--blue);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+
         .hero {
             text-align: center;
             padding: 60px 20px;
@@ -77,6 +136,25 @@
             margin-bottom: 20px;
         }
 
+        a {
+            color: var(--blue);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: var(--green);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: var(--blue);
+        }
+
         footer {
             background-color: var(--green);
             color: white;
@@ -84,35 +162,39 @@
             padding: 20px;
             margin-top: 40px;
         }
-
-        a {
-            color: var(--blue);
-        }
     </style>
 </head>
 
 <body>
-
-    <!-- Navigation -->
     <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#research">Research</a>
+            <a href="index.html#teaching">Teaching</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#awards">Awards</a>
+            <a href="index.html#leadership">Leadership</a>
+            <a href="publications.html">Publications</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="toggle-container">
+            <span>Dark mode</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
     <div class="hero">
         <img src="me.jpeg" alt="Profile Photo">
         <h1>Jonathan Odafe Eveso</h1>
         <h3>PhD Candidate | Lecturer | Wildlife Consultant | Citizen Scientist</h3>
         <p>Studying movement behavior and wildlife conservation across dynamic landscapes.</p>
+        <a href="cv.pdf" class="btn" target="_blank" rel="noopener">Download CV (PDF)</a>
     </div>
 
-    <!-- About Me -->
     <div class="section" id="about">
         <h2>About Me</h2>
         <p>
@@ -121,13 +203,12 @@
             and species conservation, with a particular interest in birds and raptors.
         </p>
         <p>
-            Before starting my PhD, I served as a Lecturer at Federal University Gashua, Nigeria, where I taught over 
-            20 undergraduate courses, supervised research projects, and contributed to departmental leadership. 
+            Before starting my PhD, I served as a Lecturer at Federal University Gashua, Nigeria, where I taught numerous 
+            undergraduate courses, supervised research projects, and contributed to departmental leadership. 
             I am also an active wildlife consultant, citizen scientist, and conservation advocate.
         </p>
     </div>
 
-    <!-- Research -->
     <div class="section" id="research">
         <h2>Research</h2>
         <p>
@@ -152,13 +233,11 @@
         </ul>
     </div>
 
-    <!-- Teaching -->
     <div class="section" id="teaching">
         <h2>Teaching & Mentorship</h2>
         <p>
-            I have taught and assessed more than 20 undergraduate courses in agriculture, forestry, wildlife ecology, 
-            and conservation science. I have supervised multiple undergraduate research projects and served in several 
-            academic leadership roles.
+            I have taught and assessed a wide range of undergraduate courses in agriculture, forestry, wildlife ecology, 
+            and conservation science, and have supervised multiple undergraduate research projects. 
         </p>
 
         <h3>Selected Courses Taught</h3>
@@ -174,19 +253,18 @@
         <ul>
             <li>Ecotourism resilience to insurgency in Chad Basin National Park</li>
             <li>Bird clubs and avitourism in Nigeria</li>
-            <li>Mobile app use among Nigerian birdwatchers</li>
+            <li>Use of mobile applications by Nigerian birdwatchers</li>
         </ul>
     </div>
 
-    <!-- Projects -->
     <div class="section" id="projects">
         <h2>Projects</h2>
 
         <div class="project-card">
             <h3>Vulture Movement & Global Change</h3>
             <p>
-                Spatio-temporal analysis of vulture behavior and space use in response to global change. 
-                Presented at IMPRS-QBEE retreats and symposiums.
+                Spatio-temporal analysis of vulture behavior and space use in response to global change, 
+                presented at IMPRS-QBEE retreats and symposia.
             </p>
         </div>
 
@@ -201,7 +279,7 @@
         <div class="project-card">
             <h3>Avifauna Diversity Studies in Nigeria</h3>
             <p>
-                Multiple field studies and publications on bird diversity, abundance, and ecological distribution 
+                Field studies and publications on bird diversity, abundance, and ecological distribution 
                 across Nigerian ecosystems.
             </p>
         </div>
@@ -209,13 +287,12 @@
         <div class="project-card">
             <h3>Wildlife Consultancy & Zoo Management</h3>
             <p>
-                Enclosure design, enrichment, taxidermy, park landscaping, and conservation education across 
-                multiple wildlife facilities.
+                Enclosure design, enrichment, taxidermy, park landscaping, and conservation education 
+                across multiple wildlife facilities.
             </p>
         </div>
     </div>
 
-    <!-- Awards -->
     <div class="section" id="awards">
         <h2>Awards & Scholarships</h2>
         <ul>
@@ -226,7 +303,6 @@
         </ul>
     </div>
 
-    <!-- Leadership -->
     <div class="section" id="leadership">
         <h2>Leadership & Service</h2>
         <ul>
@@ -238,7 +314,6 @@
         </ul>
     </div>
 
-    <!-- Contact -->
     <div class="section" id="contact">
         <h2>Contact</h2>
         <p>Email: jonathan.eveso@uni-konstanz.de</p>
@@ -253,5 +328,24 @@
         © 2025 Jonathan Odafe Eveso — Movement Ecology & Wildlife Science
     </footer>
 
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggle.checked = true;
+        }
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>
