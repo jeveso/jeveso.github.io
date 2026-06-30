@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research &amp; Publications | Jonathan Odafe Eveso</title>
+    <meta name="description" content="Publications, research interests, and scientific contributions of Jonathan Odafe Eveso. Movement ecology, vulture tracking, raptor conservation, spatial ecology, and dryland ecosystems.">
+    <link rel="canonical" href="https://jeveso.github.io/research.html">
+
+    <meta property="og:title" content="Research & Publications | Jonathan Odafe Eveso">
+    <meta property="og:description" content="Peer-reviewed publications, conference contributions, and research on vulture movement ecology, raptor conservation, and dryland ecosystems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jeveso.github.io/research.html">
+    <meta property="og:image" content="https://jeveso.github.io/og-image.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mr_jeveso">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --forest: #1a5632;
+            --forest-light: #2a7a48;
+            --ochre: #c4842d;
+            --ochre-light: #d9a85c;
+            --teal: #0a6e8a;
+            --bg: #fafaf7;
+            --bg-alt: #f0efe9;
+            --text: #2a2a2a;
+            --text-light: #5a5a5a;
+            --white: #ffffff;
+            --card-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        [data-theme="dark"] {
+            --forest: #2a7a48;
+            --forest-light: #3a9a5e;
+            --ochre: #d9a85c;
+            --ochre-light: #e8c080;
+            --teal: #1a9aba;
+            --bg: #0f1a14;
+            --bg-alt: #162218;
+            --text: #e8e6e0;
+            --text-light: #a8a8a0;
+            --white: #1a2a1e;
+            --card-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        nav {
+            background-color: var(--forest);
+            padding: 0 24px;
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 56px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-links { display: flex; align-items: center; gap: 4px; overflow-x: auto; }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.85); padding: 6px 12px;
+            text-decoration: none; font-size: 0.88rem; font-weight: 500;
+            border-radius: 4px; transition: background 0.2s, color 0.2s; white-space: nowrap;
+        }
+
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.12); color: #fff; }
+
+        .toggle-container {
+            display: flex; align-items: center; gap: 8px;
+            color: rgba(255,255,255,0.8); font-size: 0.82rem; flex-shrink: 0;
+        }
+
+        .toggle-switch { position: relative; width: 40px; height: 22px; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+
+        .slider {
+            position: absolute; cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(255,255,255,0.25);
+            transition: .3s; border-radius: 22px;
+        }
+
+        .slider:before {
+            position: absolute; content: "";
+            height: 16px; width: 16px; left: 3px; bottom: 3px;
+            background-color: white; transition: .3s; border-radius: 50%;
+        }
+
+        input:checked + .slider { background-color: var(--ochre); }
+        input:checked + .slider:before { transform: translateX(18px); }
+
+        /* Page header */
+        .page-header {
+            background: linear-gradient(135deg, var(--forest) 0%, var(--teal) 100%);
+            padding: 50px 24px 40px;
+            color: #fff;
+        }
+
+        .page-header-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 50px 24px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .section-alt { background: var(--bg-alt); }
+
+        .section h2 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1.45rem; font-weight: 700;
+            color: var(--forest);
+            margin-bottom: 20px; padding-bottom: 8px;
+            border-bottom: 3px solid var(--ochre);
+            display: inline-block;
+        }
+
+        .section p { margin-bottom: 14px; }
+
+        .section a { color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+        .section a:hover { color: var(--ochre); }
+
+        /* Skills list */
+        .skill-list { list-style: none; padding: 0; }
+        .skill-list li { padding: 8px 0; border-bottom: 1px solid var(--bg-alt); }
+        .skill-list li strong { color: var(--forest); }
+        [data-theme="dark"] .skill-list li { border-color: var(--white); }
+
+        /* Publication entries */
+        .pub-list { list-style: none; padding: 0; }
+
+        .pub-item {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--bg-alt);
+        }
+
+        [data-theme="dark"] .pub-item { border-color: var(--white); }
+
+        .pub-item:last-child { border-bottom: none; }
+
+        .pub-item .authors { font-size: 0.9rem; color: var(--text-light); margin-bottom: 4px; }
+        .pub-item .authors .me { color: var(--forest); font-weight: 600; }
+
+        .pub-item .title {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .pub-item .journal { font-style: italic; font-size: 0.9rem; color: var(--text-light); }
+
+        .doi-link {
+            display: inline-block;
+            padding: 3px 10px;
+            margin-top: 6px;
+            background: var(--teal);
+            color: #fff !important;
+            border-radius: 3px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: background 0.2s;
+        }
+
+        .doi-link:hover { background: var(--ochre) !important; }
+
+        /* Poster items */
+        .poster-item { padding: 12px 0; border-bottom: 1px solid var(--bg-alt); }
+        [data-theme="dark"] .poster-item { border-color: var(--white); }
+        .poster-item:last-child { border-bottom: none; }
+        .poster-date { font-weight: 600; color: var(--ochre); }
+
+        /* Outreach */
+        .outreach-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .outreach-item strong { color: var(--forest); }
+        .outreach-item p { margin: 0; font-size: 0.93rem; color: var(--text-light); }
+
+        /* Footer */
+        footer {
+            background: var(--forest);
+            color: rgba(255,255,255,0.85);
+            padding: 30px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: var(--ochre-light); }
+
+        @media (max-width: 700px) {
+            .page-header h1 { font-size: 1.6rem; }
+            .nav-links a { font-size: 0.8rem; padding: 6px 8px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="coordination.html">Coordination</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="toggle-container">
+        <span>Dark</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="page-header-inner">
+        <h1>Research &amp; Publications</h1>
+        <p>Movement ecology, vulture conservation, and spatial ecology across Africa's dryland ecosystems.</p>
+    </div>
+</div>
+
+<!-- Research Interests -->
+<div class="section">
+    <h2>Research Interests</h2>
+    <p>
+        My research focuses on movement and spatial ecology, wildlife management, and species conservation, 
+        with a particular emphasis on raptors in dryland Africa. I study how animals navigate 
+        dynamic and changing environments, how global change — including land-use change, climate variability, 
+        and human activity — influences their behavior and survival, and how ecological data 
+        can inform conservation strategies at landscape and continental scales.
+    </p>
+</div>
+
+<!-- Technical Skills -->
+<div class="section-alt">
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <ul class="skill-list">
+            <li><strong>Data Analysis &amp; Spatial Modeling:</strong> R (sf, move, move2, terra, dismo, sdm, biomod2, tidyverse, ggplot2), PAST, SPSS</li>
+            <li><strong>Scientific Writing &amp; Reference Management:</strong> Overleaf (LaTeX), Microsoft Office, Mendeley, Zotero</li>
+            <li><strong>Reproducibility &amp; Version Control:</strong> Git, GitHub</li>
+            <li><strong>Field Methods:</strong> Bird surveys (point counts, transects), ecological monitoring, wildlife handling, raptor identification</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Peer-Reviewed Publications -->
+<div class="section" id="publications">
+    <h2>Peer-Reviewed Journal Articles</h2>
+    <div class="pub-list">
+
+        <div class="pub-item" id="pub-adam2023">
+            <div class="authors">Adam, L. I., <span class="me">Eveso, J. O.</span>, Mohammed A. (2023)</div>
+            <div class="title">Diversity and Density of Small Mammal Species in Selected Habitats</div>
+            <div class="journal">Journal of Biology and Nature, 15(2): 16–27</div>
+            <a class="doi-link" href="https://doi.org/10.56557/JOBAN/2023/v15i28219" target="_blank" rel="noopener">View at DOI 10.56557/JOBAN/2023/v15i28219</a>
+        </div>
+
+        <div class="pub-item" id="pub-ringim2022">
+            <div class="authors">Ringim, A. S., Muhammad, S. I., Bako, L. A., Abubakar, H. M., Isa, S. M., Nelly, D. J., Bajoga, A. A., Bunu, A. S., Adam, H. A., Jalo, I. M., <span class="me">Eveso, J. O.</span>, et al. (2022)</div>
+            <div class="title">How citizen scientists are rapidly generating big distribution data for birds in Nigeria</div>
+            <div class="journal">Ostrich, 1–10</div>
+            <a class="doi-link" href="https://doi.org/10.2989/00306525.2022.2058105" target="_blank" rel="noopener">View at DOI 10.2989/00306525.2022.2058105</a>
+        </div>
+
+        <div class="pub-item" id="pub-eveso2022">
+            <div class="authors"><span class="me">Eveso, J. O.</span>, Wakawa, L. D. &amp; Richard, R. (2022)</div>
+            <div class="title">Diversity and abundance of avifauna species in selected habitats</div>
+            <div class="journal">Journal of Research in Forestry, Wildlife &amp; Environment, 14(1): 1–9</div>
+        </div>
+
+        <div class="pub-item" id="pub-adam2021">
+            <div class="authors">Adam, L. I., Gambo, A. A., <span class="me">Eveso, J. O.</span>, et al. (2021)</div>
+            <div class="title">Preliminary Study on Composition and Ecological Distribution of Small Mammals</div>
+            <div class="journal">Journal of Research in Forestry, Wildlife &amp; Environment, 13(4): 57–65</div>
+        </div>
+
+        <div class="pub-item" id="pub-eveso2019">
+            <div class="authors"><span class="me">Eveso, J. O.</span>, Ojo, S. O. &amp; Emelue, G. U. (2019)</div>
+            <div class="title">Understanding avitourism impact in Nigeria</div>
+            <div class="journal">Nigerian Journal of Wildlife Management, 3(2): 74–86</div>
+        </div>
+
+        <div class="pub-item" id="pub-owolabi2018">
+            <div class="authors">Owolabi, B. A., Adekola, O. E., <span class="me">Eveso, J. O.</span>, Akande, H. A. (2018)</div>
+            <div class="title">Diurnal Patterns of Daily Activities of Captive Animals</div>
+            <div class="journal">Journal of Biodiversity and Endangered Species, 6(2): 1–5</div>
+        </div>
+
+        <div class="pub-item" id="pub-ajayi2017">
+            <div class="authors">Ajayi, O. O. &amp; <span class="me">Eveso, J. O.</span> (2017)</div>
+            <div class="title">Ecotourism in Nigeria: A Review</div>
+            <div class="journal">Journal of Tourism, Hospitality and Sports, 28: 22–33</div>
+        </div>
+
+        <div class="pub-item" id="pub-orimaye2016">
+            <div class="authors">Orimaye, J. O., Okosodo, E. F., Ogunyemi, O. O., Owolabi, B. A. &amp; <span class="me">Eveso, J.</span> (2016)</div>
+            <div class="title">Bird Species Diversity in Agricultural Landscapes</div>
+            <div class="journal">Journal of Researches in Agricultural Sciences, 4(1 &amp; 2): 72–75</div>
+        </div>
+    </div>
+</div>
+
+<!-- Conference Proceedings -->
+<div class="section-alt">
+    <div class="section" id="proceedings">
+        <h2>Conference Proceedings</h2>
+        <div class="pub-list">
+            <div class="pub-item">
+                <div class="authors"><span class="me">Eveso, J. O.</span> &amp; Ojo, S. O. (2019)</div>
+                <div class="title">Demography, motivation and influx trend of visitors to wildlife destinations</div>
+                <div class="journal">Proceedings of the 13th Annual Conference of HATMAN</div>
+            </div>
+            <div class="pub-item">
+                <div class="authors">Emelue, G. U., <span class="me">Eveso, J. O.</span>, et al. (2019)</div>
+                <div class="title">Assessing indigenous Wildlife Conservation Practices in local communities</div>
+                <div class="journal">Proceedings of the 3rd Annual Conference of WISON</div>
+            </div>
+            <div class="pub-item">
+                <div class="authors">Adam, L. I., <span class="me">Eveso, J. O.</span>, et al. (2019)</div>
+                <div class="title">Avifauna checklist along Bade Catchment Area</div>
+                <div class="journal">Proceedings of the 3rd Annual Conference of WISON</div>
+            </div>
+            <div class="pub-item">
+                <div class="authors">Emelue, G. U., <span class="me">Eveso, J. O.</span>, et al. (2018)</div>
+                <div class="title">Awareness and Attitude of Secondary School Students toward wildlife conservation</div>
+                <div class="journal">Proceedings of the 2nd Annual Conference of WISON</div>
+            </div>
+            <div class="pub-item">
+                <div class="authors"><span class="me">Eveso, J. O.</span>, Ajayi, O. O. &amp; Okwa, S. (2017)</div>
+                <div class="title">Avitourism in Nigeria: Prospects and challenges</div>
+                <div class="journal">Proceedings of the Maiden Annual Conference of WISON</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Poster Presentations -->
+<div class="section" id="posters">
+    <h2>Poster Presentations</h2>
+    <div class="poster-item">
+        <p><span class="poster-date">March 2024</span> — <em>Vultures' response to global change.</em> IMPRS-QBEE Annual Selection Symposium, Universität Konstanz, Germany.</p>
+    </div>
+    <div class="poster-item">
+        <p><span class="poster-date">November 2023</span> — <em>Causes and Consequences of Global Change on Vultures.</em> IMPRS-QBEE Annual PhD Retreat, Freiburg, Germany.</p>
+    </div>
+</div>
+
+<!-- Outreach -->
+<div class="section-alt">
+    <div class="section" id="outreach">
+        <h2>Outreach &amp; Non-Academic Contributions</h2>
+        <div class="outreach-item">
+            <strong>Citizen Scientist — Nigeria Bird Atlas Project (NiBAP)</strong>
+            <p>Active contributor to national bird distribution mapping; completed 25 pentad surveys generating baseline data for West African conservation planning.</p>
+        </div>
+        <div class="outreach-item">
+            <strong>Founder &amp; Coordinator — Gashua Bird Club (GBC)</strong>
+            <p>Founded northeastern Nigeria's first birdwatching community, organizing field outings, educational programs, and community sensitization on bird conservation in Yobe State.</p>
+        </div>
+        <div class="outreach-item">
+            <strong>Zoo Interpretation &amp; Conservation Education</strong>
+            <p>Research facilitation, tour guiding, enrichment design, and taxidermy work at Ogba Zoological Garden and Nature Park.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Jonathan Odafe Eveso</p>
+    <p style="margin-top: 8px;">
+        <a href="index.html">Home</a>
+        <a href="coordination.html">Coordination</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
+
+<script>
+    const toggle = document.getElementById('theme-toggle');
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); toggle.checked = true; }
+    toggle.addEventListener('change', () => {
+        const theme = toggle.checked ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    });
+</script>
+
+</body>
+</html>
