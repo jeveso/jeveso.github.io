@@ -53,7 +53,8 @@
             "https://www.researchgate.net/profile/Jonathan-Eveso",
             "https://www.linkedin.com/in/jonathaneveso/",
             "https://x.com/mr_jeveso",
-            "https://bsky.app/profile/jeveso.bsky.social"
+            "https://bsky.app/profile/jeveso.bsky.social",
+            "https://github.com/jeveso"
         ],
         "knowsAbout": ["Movement Ecology", "Vulture Conservation", "Spatial Ecology", "Wildlife Management", "Raptor Tracking", "Dryland Ecosystems"]
     }
@@ -247,6 +248,7 @@
 
         .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .btn-primary { background: var(--ochre); color: #fff; }
+        .btn-secondary { background: var(--teal); color: #fff; }
         .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); }
         .btn-outline:hover { border-color: #fff; }
 
@@ -361,6 +363,92 @@
 
         [data-theme="dark"] .project-tag { background: var(--bg); }
 
+        /* ── PUBLICATIONS ── */
+        .pub-list { list-style: none; padding: 0; }
+
+        .pub-item {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--bg-alt);
+        }
+
+        [data-theme="dark"] .pub-item { border-color: var(--white); }
+
+        .pub-item:last-child { border-bottom: none; }
+
+        .pub-item .authors { font-size: 0.9rem; color: var(--text-light); margin-bottom: 4px; }
+        .pub-item .authors .me { color: var(--forest); font-weight: 600; }
+
+        .pub-item .title {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .pub-item .journal { font-style: italic; font-size: 0.9rem; color: var(--text-light); }
+
+        .doi-link {
+            display: inline-block;
+            padding: 3px 10px;
+            margin-top: 6px;
+            background: var(--teal);
+            color: #fff !important;
+            border-radius: 3px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: background 0.2s;
+        }
+
+        .doi-link:hover { background: var(--ochre) !important; }
+
+        /* ── PROFILE QUICK-LINKS ── */
+        .profile-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+
+        .profile-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--white);
+            border: 1px solid var(--bg-alt);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--forest) !important;
+            text-decoration: none !important;
+            box-shadow: var(--card-shadow);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .profile-links a:hover { background: var(--forest); color: #fff !important; }
+        [data-theme="dark"] .profile-links a { border-color: var(--forest); }
+
+        /* ── MEDIA / SCIENCE COMMUNICATION ── */
+        .media-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .media-icon {
+            width: 40px; height: 40px;
+            background: var(--teal);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.1rem; flex-shrink: 0;
+        }
+
+        .media-item h3 { margin-top: 0; margin-bottom: 4px; font-size: 1rem; }
+        .media-item p { margin-bottom: 4px; font-size: 0.9rem; color: var(--text-light); }
+        .media-item a { font-size: 0.88rem; font-weight: 600; }
+
         /* ── LEADERSHIP CARDS ── */
         .leadership-card {
             background: var(--white);
@@ -459,7 +547,7 @@
 
         .footer-links a:hover { color: var(--ochre-light); }
 
-        .social-row { display: flex; gap: 14px; margin-top: 12px; }
+        .social-row { display: flex; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
 
         .social-row a {
             display: flex;
@@ -482,6 +570,7 @@
             .hero-photo { width: 120px; height: 120px; }
             .nav-links a { font-size: 0.8rem; padding: 6px 8px; }
             .leadership-card { flex-direction: column; gap: 12px; }
+            .media-item { flex-direction: column; gap: 12px; }
             .footer-inner { flex-direction: column; }
         }
     </style>
@@ -519,7 +608,8 @@
         <p class="subtitle">Movement Ecologist · Science Coordinator · Conservation Advocate</p>
         <p class="tagline">I track vultures across the Sahel to understand how global change reshapes dryland ecosystems — and I build the teams and networks that turn ecological data into conservation action.</p>
         <div class="hero-actions">
-            <a href="cv.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
+            <a href="academic-cv.pdf" class="btn btn-primary" target="_blank" rel="noopener">Academic CV</a>
+            <a href="professional-cv.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Professional CV</a>
             <a href="contact.html" class="btn btn-outline">Get in Touch</a>
         </div>
     </div>
@@ -560,7 +650,7 @@
             </div>
             <div class="skill-tag">
                 <strong>Data & Tools</strong>
-                R (move2, terra, sf, tidyverse, ggplot2), SPSS, GitHub, Overleaf, Mendeley
+                R (move2, terra, sf, tidyverse, ggplot2), SPSS, <a href="https://github.com/jeveso" target="_blank" rel="noopener">GitHub</a>, Overleaf, Mendeley
             </div>
             <div class="skill-tag">
                 <strong>Science Coordination</strong>
@@ -600,6 +690,43 @@
         For publications, conference contributions, and technical details → 
         <a href="research.html">Research page</a>.
     </p>
+</div>
+
+<!-- SELECTED PUBLICATIONS -->
+<div class="section" id="publications">
+    <h2>Selected Publications</h2>
+    <div class="pub-list">
+
+        <div class="pub-item">
+            <div class="authors">Adam, L. I., <span class="me">Eveso, J. O.</span>, Mohammed A. (2023)</div>
+            <div class="title">Diversity and Density of Small Mammal Species in Selected Habitats</div>
+            <div class="journal">Journal of Biology and Nature, 15(2): 16–27</div>
+            <a class="doi-link" href="https://doi.org/10.56557/JOBAN/2023/v15i28219" target="_blank" rel="noopener">DOI: 10.56557/JOBAN/2023/v15i28219</a>
+        </div>
+
+        <div class="pub-item">
+            <div class="authors">Ringim, A. S., et al., incl. <span class="me">Eveso, J. O.</span> (2022)</div>
+            <div class="title">How citizen scientists are rapidly generating big distribution data for birds in Nigeria</div>
+            <div class="journal">Ostrich, 1–10</div>
+            <a class="doi-link" href="https://doi.org/10.2989/00306525.2022.2058105" target="_blank" rel="noopener">DOI: 10.2989/00306525.2022.2058105</a>
+        </div>
+
+        <div class="pub-item">
+            <div class="authors"><span class="me">Eveso, J. O.</span>, Wakawa, L. D. &amp; Richard, R. (2022)</div>
+            <div class="title">Diversity and abundance of avifauna species in selected habitats</div>
+            <div class="journal">Journal of Research in Forestry, Wildlife &amp; Environment, 14(1): 1–9</div>
+            <a class="doi-link" href="https://www.ajol.info/index.php/jrfwe/article/view/224768" target="_blank" rel="noopener">View article</a>
+        </div>
+
+    </div>
+
+    <p style="margin-top: 8px;"><a href="research.html#publications">See full publication list →</a></p>
+
+    <div class="profile-links">
+        <a href="https://scholar.google.com/citations?user=DvmhCawAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Jonathan-Eveso" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://orcid.org/0000-0003-2647-3845" target="_blank" rel="noopener">ORCID</a>
+    </div>
 </div>
 
 <!-- PROJECTS -->
@@ -656,6 +783,82 @@
             <span class="project-tag">zoo management</span>
             <span class="project-tag">consultancy</span>
         </div>
+    </div>
+</div>
+
+<!-- OPEN SOURCE & CODE -->
+<div class="section" id="opensource">
+    <h2>Open Source &amp; Code</h2>
+    <p>Reproducible analysis is core to how I work. Selected R workflows live on GitHub:</p>
+
+    <!-- NOTE: repo links below point to the GitHub profile as a placeholder.
+         Update each href to the actual repository URL once created, e.g.
+         https://github.com/jeveso/african-vulture-sdm-workflow -->
+
+    <div class="project-card">
+        <h3>African Vulture SDM Workflow</h3>
+        <p>Species distribution modeling pipeline for vulture movement and habitat suitability across dryland Africa.</p>
+        <span class="project-tag">R</span>
+        <span class="project-tag">sdm</span>
+        <span class="project-tag">biomod2</span>
+        <p style="margin-top: 12px; margin-bottom: 0;"><a href="https://github.com/jeveso" target="_blank" rel="noopener">View repository →</a></p>
+    </div>
+
+    <div class="project-card">
+        <h3>Climate Raster Processing in R</h3>
+        <p>Scripts for processing, cropping, and stacking climate raster layers used in movement and habitat models.</p>
+        <span class="project-tag">R</span>
+        <span class="project-tag">terra</span>
+        <span class="project-tag">raster data</span>
+        <p style="margin-top: 12px; margin-bottom: 0;"><a href="https://github.com/jeveso" target="_blank" rel="noopener">View repository →</a></p>
+    </div>
+
+    <div class="project-card">
+        <h3>Ecological Modelling Scripts</h3>
+        <p>General-purpose ecological modeling and data-cleaning scripts developed for movement ecology projects.</p>
+        <span class="project-tag">R</span>
+        <span class="project-tag">tidyverse</span>
+        <span class="project-tag">move2</span>
+        <p style="margin-top: 12px; margin-bottom: 0;"><a href="https://github.com/jeveso" target="_blank" rel="noopener">View repository →</a></p>
+    </div>
+
+    <p class="muted" style="margin-top: 8px;"><a href="https://github.com/jeveso" target="_blank" rel="noopener">See all repositories on GitHub →</a></p>
+</div>
+
+<!-- SCIENCE COMMUNICATION -->
+<div class="section-alt">
+    <div class="section" id="media">
+        <h2>Science Communication</h2>
+        <p>I regularly share my research and career path with public and academic audiences.</p>
+
+        <div class="media-item">
+            <div class="media-icon">▶</div>
+            <div>
+                <h3>YouTube Interview</h3>
+                <p>Conversation on pursuing a PhD in Germany and the path from Nigeria to MPI-AB.</p>
+                <a href="https://youtu.be/dbJp2Mc7XGo?si=yN9Mr8oYocgrP-LX" target="_blank" rel="noopener">Watch on YouTube →</a>
+            </div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-icon">📰</div>
+            <div>
+                <h3>Featured Interview — Global Scholarships</h3>
+                <p>Interview on scholarship strategy and building a research career in movement ecology.</p>
+                <a href="https://globalscholarships.com/scholarship-posts/jonathan-eveso/" target="_blank" rel="noopener">Read the interview →</a>
+            </div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-icon">🎤</div>
+            <div>
+                <h3>Invited Seminar — Max Planck Institute of Animal Behavior</h3>
+                <p>Seminar presented within the MPI-AB events series.</p>
+                <a href="https://www.ab.mpg.de/events/45744/2736" target="_blank" rel="noopener">Event details →</a>
+            </div>
+        </div>
+
+        <p style="margin-top: 8px;"><a href="research.html#media">More talks, posters &amp; outreach →</a></p>
     </div>
 </div>
 
@@ -799,6 +1002,9 @@
                 </a>
                 <a href="https://www.researchgate.net/profile/Jonathan-Eveso" target="_blank" rel="noopener" aria-label="ResearchGate profile">
                     <svg viewBox="0 0 24 24"><path d="M19.586 0c-1.504 0-2.727 1.213-2.727 2.707 0 1.494 1.223 2.707 2.727 2.707s2.727-1.213 2.727-2.707C22.313 1.213 21.09 0 19.586 0zM3.21 6.326C1.436 6.326 0 7.752 0 9.516v4.968C0 16.248 1.436 17.674 3.21 17.674h3.322c1.774 0 3.21-1.426 3.21-3.19v-1.225H7.156v1.225c0 .401-.33.727-.736.727H3.21c-.406 0-.736-.326-.736-.727V9.516c0-.401.33-.727.736-.727h3.21c.406 0 .736.326.736.727v.614h2.586v-.614c0-1.764-1.436-3.19-3.21-3.19H3.21zm13.79 0c-1.774 0-3.21 1.426-3.21 3.19v4.968c0 1.764 1.436 3.19 3.21 3.19h3.322c1.774 0 3.21-1.426 3.21-3.19v-1.225h-2.586v1.225c0 .401-.33.727-.736.727H17c-.406 0-.736-.326-.736-.727V9.516c0-.401.33-.727.736-.727h3.21c.406 0 .736.326.736.727v.614H23.5v-.614c0-1.764-1.436-3.19-3.21-3.19H17z"/></svg>
+                </a>
+                <a href="https://github.com/jeveso" target="_blank" rel="noopener" aria-label="GitHub profile">
+                    <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 </a>
                 <a href="https://www.linkedin.com/in/jonathaneveso/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                     <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
