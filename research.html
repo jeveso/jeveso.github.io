@@ -196,11 +196,60 @@
 
         .doi-link:hover { background: var(--ochre) !important; }
 
+        /* Profile quick-links */
+        .profile-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; margin-bottom: 8px; }
+
+        .profile-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--white);
+            border: 1px solid var(--bg-alt);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--forest) !important;
+            text-decoration: none !important;
+            box-shadow: var(--card-shadow);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .profile-links a:hover { background: var(--forest); color: #fff !important; }
+        [data-theme="dark"] .profile-links a { border-color: var(--forest); }
+
         /* Poster items */
         .poster-item { padding: 12px 0; border-bottom: 1px solid var(--bg-alt); }
         [data-theme="dark"] .poster-item { border-color: var(--white); }
         .poster-item:last-child { border-bottom: none; }
         .poster-date { font-weight: 600; color: var(--ochre); }
+
+        /* Media / Science Communication */
+        .media-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .media-icon {
+            width: 40px; height: 40px;
+            background: var(--teal);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.1rem; flex-shrink: 0;
+        }
+
+        .media-item h3 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            margin-top: 0; margin-bottom: 4px; font-size: 1rem; color: var(--forest);
+        }
+        .media-item p { margin-bottom: 4px; font-size: 0.9rem; color: var(--text-light); }
+        .media-item a { font-size: 0.88rem; font-weight: 600; }
 
         /* Outreach */
         .outreach-item {
@@ -229,6 +278,7 @@
         @media (max-width: 700px) {
             .page-header h1 { font-size: 1.6rem; }
             .nav-links a { font-size: 0.8rem; padding: 6px 8px; }
+            .media-item { flex-direction: column; gap: 12px; }
         }
     </style>
 </head>
@@ -278,7 +328,7 @@
         <ul class="skill-list">
             <li><strong>Data Analysis &amp; Spatial Modeling:</strong> R (sf, move, move2, terra, dismo, sdm, biomod2, tidyverse, ggplot2), PAST, SPSS</li>
             <li><strong>Scientific Writing &amp; Reference Management:</strong> Overleaf (LaTeX), Microsoft Office, Mendeley, Zotero</li>
-            <li><strong>Reproducibility &amp; Version Control:</strong> Git, GitHub</li>
+            <li><strong>Reproducibility &amp; Version Control:</strong> Git, <a href="https://github.com/jeveso" target="_blank" rel="noopener">GitHub</a></li>
             <li><strong>Field Methods:</strong> Bird surveys (point counts, transects), ecological monitoring, wildlife handling, raptor identification</li>
         </ul>
     </div>
@@ -287,6 +337,13 @@
 <!-- Peer-Reviewed Publications -->
 <div class="section" id="publications">
     <h2>Peer-Reviewed Journal Articles</h2>
+
+    <div class="profile-links">
+        <a href="https://scholar.google.com/citations?user=DvmhCawAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Jonathan-Eveso" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://orcid.org/0000-0003-2647-3845" target="_blank" rel="noopener">ORCID</a>
+    </div>
+
     <div class="pub-list">
 
         <div class="pub-item" id="pub-adam2023">
@@ -307,12 +364,14 @@
             <div class="authors"><span class="me">Eveso, J. O.</span>, Wakawa, L. D. &amp; Richard, R. (2022)</div>
             <div class="title">Diversity and abundance of avifauna species in selected habitats</div>
             <div class="journal">Journal of Research in Forestry, Wildlife &amp; Environment, 14(1): 1–9</div>
+            <a class="doi-link" href="https://www.ajol.info/index.php/jrfwe/article/view/224768" target="_blank" rel="noopener">View article</a>
         </div>
 
         <div class="pub-item" id="pub-adam2021">
             <div class="authors">Adam, L. I., Gambo, A. A., <span class="me">Eveso, J. O.</span>, et al. (2021)</div>
             <div class="title">Preliminary Study on Composition and Ecological Distribution of Small Mammals</div>
             <div class="journal">Journal of Research in Forestry, Wildlife &amp; Environment, 13(4): 57–65</div>
+            <a class="doi-link" href="https://www.ajol.info/index.php/jrfwe/article/view/220574" target="_blank" rel="noopener">View article</a>
         </div>
 
         <div class="pub-item" id="pub-eveso2019">
@@ -325,12 +384,14 @@
             <div class="authors">Owolabi, B. A., Adekola, O. E., <span class="me">Eveso, J. O.</span>, Akande, H. A. (2018)</div>
             <div class="title">Diurnal Patterns of Daily Activities of Captive Animals</div>
             <div class="journal">Journal of Biodiversity and Endangered Species, 6(2): 1–5</div>
+            <a class="doi-link" href="https://doi.org/10.4172/2332-2543.1000217" target="_blank" rel="noopener">View at DOI 10.4172/2332-2543.1000217</a>
         </div>
 
         <div class="pub-item" id="pub-ajayi2017">
             <div class="authors">Ajayi, O. O. &amp; <span class="me">Eveso, J. O.</span> (2017)</div>
             <div class="title">Ecotourism in Nigeria: A Review</div>
             <div class="journal">Journal of Tourism, Hospitality and Sports, 28: 22–33</div>
+            <a class="doi-link" href="https://www.iiste.org/Journals/index.php/JTHS/article/view/37210" target="_blank" rel="noopener">View article</a>
         </div>
 
         <div class="pub-item" id="pub-orimaye2016">
@@ -386,22 +447,86 @@
     </div>
 </div>
 
-<!-- Outreach -->
+<!-- Media & Talks -->
 <div class="section-alt">
-    <div class="section" id="outreach">
-        <h2>Outreach &amp; Non-Academic Contributions</h2>
-        <div class="outreach-item">
-            <strong>Citizen Scientist — Nigeria Bird Atlas Project (NiBAP)</strong>
-            <p>Active contributor to national bird distribution mapping; completed 25 pentad surveys generating baseline data for West African conservation planning.</p>
+    <div class="section" id="media">
+        <h2>Media &amp; Talks — Science Communication</h2>
+        <p>Interviews, invited talks, and seminars sharing this research with academic and public audiences. See also the Featured section on <a href="https://www.linkedin.com/in/jonathaneveso/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+
+        <h3 style="font-family: 'Source Serif 4', Georgia, serif; color: var(--forest); margin: 20px 0 10px;">Interviews</h3>
+
+        <div class="media-item">
+            <div class="media-icon">▶</div>
+            <div>
+                <h3>YouTube Interview</h3>
+                <p>Conversation on pursuing a PhD in Germany and the path from Nigeria to MPI-AB.</p>
+                <a href="https://youtu.be/dbJp2Mc7XGo?si=yN9Mr8oYocgrP-LX" target="_blank" rel="noopener">Watch on YouTube →</a>
+            </div>
         </div>
-        <div class="outreach-item">
-            <strong>Founder &amp; Coordinator — Gashua Bird Club (GBC)</strong>
-            <p>Founded northeastern Nigeria's first birdwatching community, organizing field outings, educational programs, and community sensitization on bird conservation in Yobe State.</p>
+
+        <div class="media-item">
+            <div class="media-icon">📰</div>
+            <div>
+                <h3>Featured Interview — Global Scholarships</h3>
+                <p>Interview on scholarship strategy and building a research career in movement ecology.</p>
+                <a href="https://globalscholarships.com/scholarship-posts/jonathan-eveso/" target="_blank" rel="noopener">Read the interview →</a>
+            </div>
         </div>
-        <div class="outreach-item">
-            <strong>Zoo Interpretation &amp; Conservation Education</strong>
-            <p>Research facilitation, tour guiding, enrichment design, and taxidermy work at Ogba Zoological Garden and Nature Park.</p>
+
+        <!-- A third interview was mentioned but no link provided yet — add here once available, e.g.:
+        <div class="media-item">
+            <div class="media-icon">📰</div>
+            <div>
+                <h3>[Interview title]</h3>
+                <p>[Short description]</p>
+                <a href="[URL]" target="_blank" rel="noopener">Read / watch →</a>
+            </div>
         </div>
+        -->
+
+        <h3 style="font-family: 'Source Serif 4', Georgia, serif; color: var(--forest); margin: 28px 0 10px;">Invited Talks &amp; Seminars</h3>
+
+        <div class="media-item">
+            <div class="media-icon">🎤</div>
+            <div>
+                <h3>Invited Seminar — Max Planck Institute of Animal Behavior</h3>
+                <p>Seminar presented within the MPI-AB events series.</p>
+                <a href="https://www.ab.mpg.de/events/45744/2736" target="_blank" rel="noopener">Event details →</a>
+            </div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-icon">🖼️</div>
+            <div>
+                <h3>IMPRS-QBEE Annual Selection Symposium</h3>
+                <p>Poster: "Vultures' response to global change." Universität Konstanz, Germany, March 2024.</p>
+            </div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-icon">🖼️</div>
+            <div>
+                <h3>IMPRS-QBEE Annual PhD Retreat</h3>
+                <p>Poster: "Causes and Consequences of Global Change on Vultures." Freiburg, Germany, November 2023.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Outreach -->
+<div class="section" id="outreach">
+    <h2>Outreach &amp; Non-Academic Contributions</h2>
+    <div class="outreach-item">
+        <strong>Citizen Scientist — Nigeria Bird Atlas Project (NiBAP)</strong>
+        <p>Active contributor to national bird distribution mapping; completed 25 pentad surveys generating baseline data for West African conservation planning.</p>
+    </div>
+    <div class="outreach-item">
+        <strong>Founder &amp; Coordinator — Gashua Bird Club (GBC)</strong>
+        <p>Founded northeastern Nigeria's first birdwatching community, organizing field outings, educational programs, and community sensitization on bird conservation in Yobe State.</p>
+    </div>
+    <div class="outreach-item">
+        <strong>Zoo Interpretation &amp; Conservation Education</strong>
+        <p>Research facilitation, tour guiding, enrichment design, and taxidermy work at Ogba Zoological Garden and Nature Park.</p>
     </div>
 </div>
 
