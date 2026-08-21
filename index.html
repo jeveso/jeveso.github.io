@@ -231,22 +231,25 @@
             background-size: cover;
             background-position: center;
             opacity: 0;
-            animation: heroFade 36s infinite;
+            animation: heroFade 45s infinite;
         }
 
-        /* 6 slides × 6s = 36s cycle */
+        /* 9 slides × 5s = 45s cycle */
         .hero-slide:nth-child(1) { animation-delay: 0s; }
-        .hero-slide:nth-child(2) { animation-delay: 6s; }
-        .hero-slide:nth-child(3) { animation-delay: 12s; }
-        .hero-slide:nth-child(4) { animation-delay: 18s; }
-        .hero-slide:nth-child(5) { animation-delay: 24s; }
-        .hero-slide:nth-child(6) { animation-delay: 30s; }
+        .hero-slide:nth-child(2) { animation-delay: 5s; }
+        .hero-slide:nth-child(3) { animation-delay: 10s; }
+        .hero-slide:nth-child(4) { animation-delay: 15s; }
+        .hero-slide:nth-child(5) { animation-delay: 20s; }
+        .hero-slide:nth-child(6) { animation-delay: 25s; }
+        .hero-slide:nth-child(7) { animation-delay: 30s; }
+        .hero-slide:nth-child(8) { animation-delay: 35s; }
+        .hero-slide:nth-child(9) { animation-delay: 40s; }
 
         @keyframes heroFade {
             0%      { opacity: 0; }
-            2.78%   { opacity: 1; }
-            16.67%  { opacity: 1; }
-            19.44%  { opacity: 0; }
+            1.78%   { opacity: 1; }
+            11.11%  { opacity: 1; }
+            12.89%  { opacity: 0; }
             100%    { opacity: 0; }
         }
 
@@ -654,13 +657,16 @@
          Then change the gradient in .hero::after to act as an overlay only. -->
     <div class="hero-content">
         <div class="hero-media">
-            <div class="hero-slideshow" role="img" aria-label="Jonathan Odafe Eveso — portrait, vulture research poster, public engagement at MPI Animal Behavior, Sahel bird surveys, and seminar presentation">
+            <div class="hero-slideshow" role="img" aria-label="Jonathan Odafe Eveso — portrait, vulture research poster, public engagement at MPI Animal Behavior, Sahel bird surveys, seminar presentation, and group birdwatching with the Gashua Bird Club">
                 <div class="hero-slide" style="background-image: url('gallery/hero-1-business-portrait.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('gallery/hero-2-vulture-poster-imprs.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('gallery/hero-3-open-day-public-engagement.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('gallery/hero-4-sahel-rice-field-survey.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('gallery/hero-5-seminar-presentation.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('gallery/hero-6-wetland-binoculars-fieldguide.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-7-birdclub-group-survey.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-8-community-birding-spotting.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-9-field-portrait-savanna.jpg');"></div>
             </div>
         </div>
         <div class="hero-text">
