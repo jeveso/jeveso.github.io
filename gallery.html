@@ -99,57 +99,29 @@
             border-bottom: 3px solid var(--ochre); display: inline-block;
         }
 
-        /* Gallery grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 18px;
-            margin-top: 16px;
+            gap: 18px; margin-top: 16px;
         }
 
         .gallery-item {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
+            background: var(--white); border-radius: 8px; overflow: hidden;
             box-shadow: var(--card-shadow);
             transition: box-shadow 0.2s, transform 0.2s;
         }
 
         .gallery-item:hover {
-            box-shadow: 0 6px 24px rgba(0,0,0,0.12);
-            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.12); transform: translateY(-2px);
         }
 
         .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Placeholder for images not yet added */
-        .img-placeholder {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, var(--bg-alt) 0%, #d0cfca 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            text-align: center;
-            padding: 16px;
-        }
-
-        [data-theme="dark"] .img-placeholder {
-            background: linear-gradient(135deg, var(--white) 0%, #2a3a2e 100%);
+            width: 100%; height: 200px; object-fit: cover; display: block;
         }
 
         .gallery-caption {
-            padding: 14px 16px;
-            font-size: 0.88rem;
-            color: var(--text-light);
-            line-height: 1.5;
+            padding: 14px 16px; font-size: 0.88rem;
+            color: var(--text-light); line-height: 1.5;
         }
 
         footer {
@@ -164,7 +136,6 @@
             .nav-links a { font-size: 0.8rem; padding: 6px 8px; }
             .gallery-grid { grid-template-columns: 1fr 1fr; }
         }
-
         @media (max-width: 440px) {
             .gallery-grid { grid-template-columns: 1fr; }
         }
@@ -197,112 +168,176 @@
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     FIELDWORK
-     ═══════════════════════════════════════════════════ -->
+<!-- ═══ FIELDWORK & BIRD SURVEYS ═══ -->
 <div class="section">
-    <h2>Fieldwork</h2>
+    <h2>Fieldwork &amp; Bird Surveys</h2>
     <div class="gallery-grid">
         <div class="gallery-item">
-            <!-- IMAGE: field-bird-survey.jpg — You conducting a bird survey (point count or transect walk) in savanna habitat. 800×600px minimum. -->
-            <div class="img-placeholder">field-bird-survey.jpg</div>
-            <div class="gallery-caption">Bird surveys and avifauna monitoring across Nigerian savanna ecosystems.</div>
+            <img src="gallery/field-sahel-solo-binoculars.jpg" alt="Jonathan Eveso surveying dryland Sahel landscape with binoculars and backpack" loading="lazy">
+            <div class="gallery-caption">Bird survey in the Sahel — scanning dryland habitat during pentad surveys for the Nigeria Bird Atlas Project.</div>
         </div>
         <div class="gallery-item">
-            <!-- IMAGE: field-dryland.jpg — Dryland/Sahel landscape during fieldwork, ideally with research equipment or team visible. 800×600px. -->
-            <div class="img-placeholder">field-dryland.jpg</div>
-            <div class="gallery-caption">Dryland fieldwork and ecological observations in the Sahel.</div>
+            <img src="gallery/field-cbnp-trail-binoculars.jpg" alt="Jonathan Eveso walking a forest trail with binoculars at Chad Basin National Park" loading="lazy">
+            <div class="gallery-caption">Ecological survey along forest trails at Chad Basin National Park, Dagona sector.</div>
         </div>
         <div class="gallery-item">
-            <!-- IMAGE: field-vulture.jpg — Vulture in flight, tagged vulture, or vulture tracking equipment. 800×600px. -->
-            <div class="img-placeholder">field-vulture.jpg</div>
-            <div class="gallery-caption">Vulture ecology and movement tracking in dryland Africa.</div>
+            <img src="gallery/field-sahel-binocular-survey.jpg" alt="Two researchers conducting a bird survey with binoculars in dryland Sahel habitat" loading="lazy">
+            <div class="gallery-caption">Paired bird survey — one observer scanning, one recording — across Sahel dryland habitat.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-wetland-portrait-fieldguide.jpg" alt="Jonathan Eveso at a wetland site with binoculars and Birds of West Africa field guide" loading="lazy">
+            <div class="gallery-caption">Wetland bird survey at rice paddy habitat with binoculars and the Birds of Western Africa field guide.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-wetland-recording-data.jpg" alt="Jonathan Eveso recording field data at a wetland survey site" loading="lazy">
+            <div class="gallery-caption">Recording species observations at a wetland survey site near Gashua.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-sahel-road-binoculars-portrait.jpg" alt="Jonathan Eveso with binoculars on a road through Sahel dryland landscape" loading="lazy">
+            <div class="gallery-caption">Roadside bird survey in the Sahel — binoculars and field notes in hand.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-cbnp-dagona-sign.jpg" alt="Chad Basin National Park Dagona Base Camp entrance sign" loading="lazy">
+            <div class="gallery-caption">Chad Basin National Park, Dagona Base Camp — a key field site for student excursions and ecological research.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-sand-dune-fieldguide.jpg" alt="Jonathan Eveso sitting on a sand dune reading a bird field guide with binoculars" loading="lazy">
+            <div class="gallery-caption">Consulting the field guide between survey transects at the Bade catchment area.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-bade-catchment-team.jpg" alt="Three researchers at the Bade catchment river during a bird survey in golden light" loading="lazy">
+            <div class="gallery-caption">Survey team at the Bade catchment — collaborative bird monitoring along the river.</div>
         </div>
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     LAB & DATA WORK
-     ═══════════════════════════════════════════════════ -->
+<!-- ═══ CITIZEN SCIENCE & COMMUNITY ENGAGEMENT ═══ -->
 <div class="section-alt">
     <div class="section">
-        <h2>Lab &amp; Data Work</h2>
+        <h2>Citizen Science &amp; Community Engagement</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <!-- IMAGE: lab-rstudio.jpg — Screen showing R/RStudio with movement data analysis, maps, or ggplot output. 800×600px. -->
-                <div class="img-placeholder">lab-rstudio.jpg</div>
-                <div class="gallery-caption">Spatial analysis and movement modeling in R at MPI-AB.</div>
+                <img src="gallery/field-sahel-community-data-collection.jpg" alt="Researchers and local community member examining field data on the ground in the Sahel" loading="lazy">
+                <div class="gallery-caption">Community-based data collection — working with local residents during NiBAP pentad surveys in the Sahel.</div>
             </div>
             <div class="gallery-item">
-                <!-- IMAGE: lab-dataviz.jpg — A figure, poster graphic, or data visualization from your research. 800×600px. -->
-                <div class="img-placeholder">lab-dataviz.jpg</div>
-                <div class="gallery-caption">Data visualization and scientific graphics for publications.</div>
+                <img src="gallery/field-sahel-community-consultation.jpg" alt="Researchers consulting a field guide with a local community member in dryland habitat" loading="lazy">
+                <div class="gallery-caption">Consulting with local community members on bird identification during Sahel field surveys.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/field-cbnp-coordination-park-staff.jpg" alt="Jonathan Eveso in conversation with Chad Basin National Park staff member" loading="lazy">
+                <div class="gallery-caption">Coordinating with Chad Basin National Park staff on field logistics and conservation planning.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/field-bade-catchment-directing.jpg" alt="Jonathan Eveso directing fieldwork at the Bade catchment with colleagues" loading="lazy">
+                <div class="gallery-caption">Leading field coordination at the Bade catchment — directing survey activities with colleagues.</div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     TEACHING & MENTORSHIP
-     ═══════════════════════════════════════════════════ -->
+<!-- ═══ TEACHING & MENTORSHIP ═══ -->
 <div class="section">
     <h2>Teaching &amp; Mentorship</h2>
     <div class="gallery-grid">
         <div class="gallery-item">
-            <!-- IMAGE: teach-classroom.jpg — You lecturing or in a classroom setting at Federal University Gashua. 800×600px. -->
-            <div class="img-placeholder">teach-classroom.jpg</div>
-            <div class="gallery-caption">Undergraduate lectures in wildlife ecology at Federal University Gashua.</div>
+            <img src="gallery/teach-taxidermy-demonstration.jpg" alt="Jonathan Eveso demonstrating bird taxidermy to students wearing gloves and masks" loading="lazy">
+            <div class="gallery-caption">Hands-on taxidermy demonstration — teaching specimen preparation techniques to wildlife ecology students.</div>
         </div>
         <div class="gallery-item">
-            <!-- IMAGE: teach-field-trip.jpg — Students on a field trip or practical session you led. 800×600px. -->
-            <div class="img-placeholder">teach-field-trip.jpg</div>
-            <div class="gallery-caption">Leading student field trips and practical training in conservation.</div>
+            <img src="gallery/teach-field-briefing-cbnp.jpg" alt="Jonathan Eveso briefing students outdoors at Chad Basin National Park" loading="lazy">
+            <div class="gallery-caption">Field briefing at Chad Basin National Park — preparing students for ecological data collection.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-birdwatching-group.jpg" alt="Group of students at a wetland during a birdwatching field trip" loading="lazy">
+            <div class="gallery-caption">Student field excursion — birdwatching and ecological monitoring at a wetland site near Gashua.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-birdwatching-students-equipment.jpg" alt="Students with binoculars and bird field guide during a field trip" loading="lazy">
+            <div class="gallery-caption">Students learning bird identification with binoculars and field guides during a practical field session.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/field-birdwatching-selfie-with-students.jpg" alt="Jonathan Eveso selfie with students during a birdwatching field trip" loading="lazy">
+            <div class="gallery-caption">With students during a birdwatching excursion at a wetland site in Yobe State.</div>
         </div>
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     CONFERENCES & EVENTS
-     ═══════════════════════════════════════════════════ -->
+<!-- ═══ GASHUA BIRD CLUB ═══ -->
 <div class="section-alt">
     <div class="section">
-        <h2>Conferences &amp; Events</h2>
+        <h2>Gashua Bird Club</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <!-- IMAGE: conf-poster.jpg — You presenting a poster at IMPRS-QBEE or another conference. 800×600px. -->
-                <div class="img-placeholder">conf-poster.jpg</div>
-                <div class="gallery-caption">Poster presentation at the IMPRS-QBEE Annual PhD Retreat, Freiburg.</div>
+                <img src="gallery/outreach-birdclub-inauguration-group.jpg" alt="Gashua Bird Club inauguration group photo with telescope and field guides at Federal University Gashua" loading="lazy">
+                <div class="gallery-caption">Inauguration of the Gashua Bird Club at Federal University Gashua, May 2018 — northeastern Nigeria's first organized birdwatching community.</div>
             </div>
             <div class="gallery-item">
-                <!-- IMAGE: conf-group.jpg — Group photo at a conference, workshop, or WISON event. 800×600px. -->
-                <div class="img-placeholder">conf-group.jpg</div>
-                <div class="gallery-caption">Workshops, symposia, and professional development events.</div>
+                <img src="gallery/outreach-birdclub-meeting-leading.jpg" alt="Jonathan Eveso leading a discussion with Gashua Bird Club members" loading="lazy">
+                <div class="gallery-caption">Leading a planning session with club members — discussing survey protocols and upcoming outings.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/outreach-birdclub-meeting-room.jpg" alt="Gashua Bird Club meeting with members seated in discussion" loading="lazy">
+                <div class="gallery-caption">Bird club meeting in session — building a community of citizen scientists in Yobe State.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/outreach-birdclub-equipment-telescope.jpg" alt="Telescope and Birds of Western Africa field guide displayed at Gashua Bird Club" loading="lazy">
+                <div class="gallery-caption">Club equipment — telescope and the Birds of Western Africa field guide used for training and surveys.</div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════
-     OUTREACH & COMMUNITY
-     ═══════════════════════════════════════════════════ -->
+<!-- ═══ CONFERENCES & PROFESSIONAL NETWORK ═══ -->
 <div class="section">
-    <h2>Outreach &amp; Community</h2>
+    <h2>Conferences &amp; Professional Network</h2>
     <div class="gallery-grid">
         <div class="gallery-item">
-            <!-- IMAGE: outreach-birdclub.jpg — Gashua Bird Club outing, members with binoculars, or a bird count event. 800×600px. -->
-            <div class="img-placeholder">outreach-birdclub.jpg</div>
-            <div class="gallery-caption">Gashua Bird Club — birdwatching outing and citizen science in Yobe State.</div>
+            <img src="gallery/conf-wison-backdrop.jpg" alt="Jonathan Eveso at the WISON conference in front of organization banners" loading="lazy">
+            <div class="gallery-caption">At the Wildlife Society of Nigeria (WISON) Annual Conference — representing the northeastern chapter.</div>
         </div>
         <div class="gallery-item">
-            <!-- IMAGE: outreach-zoo.jpg — Conservation education, zoo tour, or enrichment work at Ogba Zoo. 800×600px. -->
-            <div class="img-placeholder">outreach-zoo.jpg</div>
-            <div class="gallery-caption">Conservation education and zoo interpretation at Ogba Zoological Garden.</div>
+            <img src="gallery/conf-wison-colleagues.jpg" alt="Jonathan Eveso with colleagues at the WISON conference wearing conference badges" loading="lazy">
+            <div class="gallery-caption">With colleagues at WISON — building cross-institutional networks in Nigerian wildlife conservation.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/conf-wison-senior-colleagues.jpg" alt="Jonathan Eveso with senior wildlife conservation colleagues at a WISON conference" loading="lazy">
+            <div class="gallery-caption">Networking with senior researchers and conservation leaders at the WISON conference venue.</div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ MENTORS & ACADEMIC JOURNEY ═══ -->
+<div class="section-alt">
+    <div class="section">
+        <h2>Mentors &amp; Academic Journey</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="gallery/graduation-dept-sign-solo.jpg" alt="Jonathan Eveso in graduation regalia at the Department of Wildlife and Ecotourism Management" loading="lazy">
+                <div class="gallery-caption">Graduation day at the Department of Wildlife and Ecotourism Management — the beginning of a career in ecology.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/mentors-graduation-wildlife-dept.jpg" alt="Jonathan Eveso with a mentor at graduation in front of the Department of Wildlife sign" loading="lazy">
+                <div class="gallery-caption">With a mentor at graduation — in front of the Education Trust Fund and Department of Wildlife and Ecotourism Management.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/mentors-prof-alao-bade-catchment.jpg" alt="Jonathan Eveso with Prof J.S. Alao Former DVC Academics at Bade catchment field site" loading="lazy">
+                <div class="gallery-caption">With Prof. J.S. Alao (Former Deputy Vice Chancellor — Academics) during fieldwork at the Bade catchment.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/graduation-portrait.jpg" alt="Jonathan Eveso graduation portrait in academic regalia" loading="lazy">
+                <div class="gallery-caption">Graduation portrait — marking the transition from student to lecturer and researcher.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/graduation-university-crest.jpg" alt="Jonathan Eveso in graduation regalia at university crest" loading="lazy">
+                <div class="gallery-caption">At the university crest on graduation day — a milestone in the academic journey.</div>
+            </div>
         </div>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2025 Jonathan Odafe Eveso</p>
+    <p>&copy; 2026 Jonathan Odafe Eveso</p>
     <p style="margin-top: 8px;">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
