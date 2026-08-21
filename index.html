@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Odafe Eveso | Movement Ecology & Wildlife Science</title>
+    <title>Jonathan Odafe Eveso | Movement Ecology &amp; Wildlife Science</title>
     <meta name="description" content="Jonathan Odafe Eveso — PhD researcher at MPI Animal Behavior studying vulture movement ecology, spatial ecology, and dryland conservation. Lecturer, wildlife consultant, and science coordinator bridging African and European conservation research.">
     <meta name="keywords" content="movement ecology, vulture tracking, raptor conservation Africa, spatial ecology Sahel, wildlife management Nigeria, DAAD PhD ecology, citizen science birds, science coordination">
-    <link rel="canonical" href="https://jeveso.github.io/index.html">
+    <link rel="canonical" href="https://jeveso.github.io/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Jonathan Odafe Eveso | Movement Ecology & Wildlife Science">
+    <meta property="og:site_name" content="Jonathan Odafe Eveso">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Jonathan Odafe Eveso | Movement Ecology &amp; Wildlife Science">
     <meta property="og:description" content="PhD researcher at MPI Animal Behavior tracking vultures across the Sahel. Movement ecology, dryland conservation, and science coordination spanning Nigeria and Germany.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jeveso.github.io/">
-    <meta property="og:image" content="https://jeveso.github.io/jeveso_business_potrait.jpeg">
+    <meta property="og:image" content="https://jeveso.github.io/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Jonathan Odafe Eveso — Movement Ecologist and Science Coordinator, MPI Animal Behavior and Universität Konstanz">
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@mr_jeveso">
-    <meta name="twitter:title" content="Jonathan Odafe Eveso | Movement Ecology & Wildlife Science">
+    <meta name="twitter:creator" content="@mr_jeveso">
+    <meta name="twitter:title" content="Jonathan Odafe Eveso | Movement Ecology &amp; Wildlife Science">
     <meta name="twitter:description" content="PhD researcher at MPI Animal Behavior tracking vultures across the Sahel. Movement ecology, dryland conservation, and science coordination.">
-    <meta name="twitter:image" content="https://jeveso.github.io/jeveso_business">
+    <meta name="twitter:image" content="https://jeveso.github.io/og-image.jpg">
+    <meta name="twitter:image:alt" content="Jonathan Odafe Eveso — Movement Ecologist and Science Coordinator">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -46,7 +53,7 @@
             "name": "Federal University Gashua"
         },
         "url": "https://jeveso.github.io",
-        "image": "https://jeveso.github.io/jeveso_business_potrait.jpeg",
+        "image": "https://jeveso.github.io/gallery/hero-1-business-portrait.jpg",
         "sameAs": [
             "https://orcid.org/0000-0003-2647-3845",
             "https://scholar.google.com/citations?user=DvmhCawAAAAJ",
@@ -167,8 +174,7 @@
         /* ── HERO ── */
         .hero {
             position: relative;
-            padding: 80px 24px 70px;
-            text-align: center;
+            padding: 70px 24px 70px;
             color: #fff;
             overflow: hidden;
         }
@@ -177,7 +183,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            /* IMAGE PLACEHOLDER: hero-bg.jpg — a wide landscape field photo 
+            /* IMAGE PLACEHOLDER: hero-bg.jpg — a wide landscape field photo
                (savanna, dryland, or fieldwork scene). Recommended: 1920×800px. */
             background: linear-gradient(135deg, #0f2b1a 0%, #1a5632 35%, #0a6e8a 70%, #c4842d 100%);
             background-size: cover;
@@ -196,50 +202,91 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 720px;
+            max-width: 1100px;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            text-align: left;
         }
 
-        .hero-photo {
-            width: 160px; height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid rgba(255,255,255,0.6);
-            margin-bottom: 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        .hero-media { flex: 1 1 0; min-width: 0; }
+        .hero-text  { flex: 1 1 0; min-width: 0; }
+
+        /* ── HERO SLIDESHOW ── */
+        .hero-slideshow {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 4px solid rgba(255,255,255,0.55);
+            box-shadow: 0 6px 28px rgba(0,0,0,0.35);
+            background: #0f2b1a;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: heroFade 36s infinite;
+        }
+
+        /* 6 slides × 6s = 36s cycle */
+        .hero-slide:nth-child(1) { animation-delay: 0s; }
+        .hero-slide:nth-child(2) { animation-delay: 6s; }
+        .hero-slide:nth-child(3) { animation-delay: 12s; }
+        .hero-slide:nth-child(4) { animation-delay: 18s; }
+        .hero-slide:nth-child(5) { animation-delay: 24s; }
+        .hero-slide:nth-child(6) { animation-delay: 30s; }
+
+        @keyframes heroFade {
+            0%      { opacity: 0; }
+            2.78%   { opacity: 1; }
+            16.67%  { opacity: 1; }
+            19.44%  { opacity: 0; }
+            100%    { opacity: 0; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-slide { animation: none; opacity: 0; }
+            .hero-slide:nth-child(1) { opacity: 1; }
         }
 
         .hero h1 {
             font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 2.4rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            line-height: 1.1;
+            margin-bottom: 12px;
             letter-spacing: -0.02em;
         }
 
         .hero .subtitle {
-            font-size: 1rem;
-            font-weight: 500;
+            font-size: 1.15rem;
+            font-weight: 600;
             color: var(--ochre-light);
-            margin-bottom: 16px;
-            letter-spacing: 0.02em;
+            margin-bottom: 18px;
+            letter-spacing: 0.01em;
         }
 
         .hero .tagline {
             font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-style: italic;
-            color: rgba(255,255,255,0.88);
-            line-height: 1.6;
-            margin-bottom: 28px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.55;
+            margin-bottom: 30px;
         }
 
-        .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .hero-actions { display: flex; gap: 12px; justify-content: flex-start; flex-wrap: wrap; }
 
         .btn {
             display: inline-block;
-            padding: 10px 22px;
-            font-size: 0.9rem;
+            padding: 12px 26px;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 5px;
@@ -565,9 +612,12 @@
 
         /* ── RESPONSIVE ── */
         @media (max-width: 700px) {
-            .hero h1 { font-size: 1.8rem; }
-            .hero { padding: 50px 20px 40px; }
-            .hero-photo { width: 120px; height: 120px; }
+            .hero { padding: 50px 20px 45px; }
+            .hero-content { flex-direction: column; gap: 28px; text-align: center; }
+            .hero-actions { justify-content: center; }
+            .hero h1 { font-size: 2.1rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .hero .tagline { font-size: 1.05rem; }
             .nav-links a { font-size: 0.8rem; padding: 6px 8px; }
             .leadership-card { flex-direction: column; gap: 12px; }
             .media-item { flex-direction: column; gap: 12px; }
@@ -599,18 +649,29 @@
 <div class="hero">
     <!-- IMAGE PLACEHOLDER: To add a field photo background, add this CSS to .hero::before:
          background-image: url('hero-bg.jpg');
-         Recommended image: you doing fieldwork, a savanna/dryland landscape, or 
+         Recommended image: you doing fieldwork, a savanna/dryland landscape, or
          vulture tracking scene. Name it hero-bg.jpg. Size: 1920×800px minimum.
          Then change the gradient in .hero::after to act as an overlay only. -->
     <div class="hero-content">
-        <img src="me.jpeg" alt="Jonathan Odafe Eveso, PhD candidate in movement ecology at Max Planck Institute of Animal Behavior" class="hero-photo">
-        <h1>Jonathan Odafe Eveso</h1>
-        <p class="subtitle">Movement Ecologist · Science Coordinator · Conservation Advocate</p>
-        <p class="tagline">I track vultures across the Sahel to understand how global change reshapes dryland ecosystems — and I build the teams and networks that turn ecological data into conservation action.</p>
-        <div class="hero-actions">
-            <a href="academic-cv.pdf" class="btn btn-primary" target="_blank" rel="noopener">Academic CV</a>
-            <a href="professional-cv.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Professional CV</a>
-            <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+        <div class="hero-media">
+            <div class="hero-slideshow" role="img" aria-label="Jonathan Odafe Eveso — portrait, vulture research poster, public engagement at MPI Animal Behavior, Sahel bird surveys, and seminar presentation">
+                <div class="hero-slide" style="background-image: url('gallery/hero-1-business-portrait.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-2-vulture-poster-imprs.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-3-open-day-public-engagement.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-4-sahel-rice-field-survey.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-5-seminar-presentation.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('gallery/hero-6-wetland-binoculars-fieldguide.jpg');"></div>
+            </div>
+        </div>
+        <div class="hero-text">
+            <h1>Jonathan Odafe Eveso</h1>
+            <p class="subtitle">Movement Ecologist · Science Coordinator · Conservation Advocate</p>
+            <p class="tagline">I track vultures across the Sahel to understand how global change reshapes dryland ecosystems — and I build the teams and networks that turn ecological data into conservation action.</p>
+            <div class="hero-actions">
+                <a href="academic-cv.pdf" class="btn btn-primary" target="_blank" rel="noopener">Academic CV</a>
+                <a href="professional-cv.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Professional CV</a>
+                <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+            </div>
         </div>
     </div>
 </div>
@@ -645,11 +706,11 @@
         <h2>Core Competencies</h2>
         <div class="skills-grid">
             <div class="skill-tag">
-                <strong>Research & Analysis</strong>
+                <strong>Research &amp; Analysis</strong>
                 Movement ecology, spatial modeling, species distribution, large ecological datasets
             </div>
             <div class="skill-tag">
-                <strong>Data & Tools</strong>
+                <strong>Data &amp; Tools</strong>
                 R (move2, terra, sf, tidyverse, ggplot2), SPSS, <a href="https://github.com/jeveso" target="_blank" rel="noopener">GitHub</a>, Overleaf, Mendeley
             </div>
             <div class="skill-tag">
@@ -661,7 +722,7 @@
                 Citizen science programs, conservation outreach, stakeholder engagement, workshop facilitation
             </div>
             <div class="skill-tag">
-                <strong>Teaching & Mentorship</strong>
+                <strong>Teaching &amp; Mentorship</strong>
                 University-level instruction, student research supervision, curriculum development
             </div>
             <div class="skill-tag">
@@ -1016,7 +1077,7 @@
                     <svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.6 3.497 6.212 3.262-3.874.69-7.266 2.389-3.974 7.478 3.623 4.676 5.86-1.752 9.138-7.59 3.278 5.838 4.76 11.69 9.138 7.59 3.292-5.089-.1-6.788-3.974-7.478 2.612.235 5.427-.635 6.212-3.262.246-.828.624-5.788.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
                 </a>
             </div>
-            <p class="copyright">&copy; 2025 Jonathan Odafe Eveso</p>
+            <p class="copyright">&copy; 2026 Jonathan Odafe Eveso</p>
         </div>
         <div class="footer-links">
             <a href="research.html">Research</a>
